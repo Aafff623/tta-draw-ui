@@ -92,13 +92,13 @@ Logo、小号深色图标和大幅彩色插画不会混在同一张素材板里�
 **方式一 · 执行命令**
 
 ```bash
-npx skills add oil-oil/draw-ui
+npx skills add threetwoa/tta-draw-ui
 ```
 
 **方式二 · 直接交给 Agent**
 
 ```text
-请安装这个 Skill：https://github.com/oil-oil/draw-ui
+请安装这个 Skill：https://github.com/threetwoa/tta-draw-ui
 ```
 
 安装完成后，可以直接描述页面：
