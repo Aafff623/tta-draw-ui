@@ -1,0 +1,15 @@
+# Secrets — never commit
+.env
+.env.local
+.env.*
+!.env.example
+.zenmux_api_key
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# OS
+.DS_Store

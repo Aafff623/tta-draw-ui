@@ -1,16 +1,16 @@
 <p align="center">
-  <img src="./assets/readme/readme-hero.png" width="100%" alt="draw-ui：先把页面想清楚，再把设计画出来。">
+  <img src="./assets/readme/readme-hero.png" width="100%" alt="tta-draw-ui：先把页面想清楚，再把设计画出来。">
 </p>
 
 <p align="center">
-  <img src="./assets/readme/readme-section-what.svg" width="100%" alt="02 draw-ui 是什么">
+  <img src="./assets/readme/readme-section-what.svg" width="100%" alt="02 tta-draw-ui 是什么">
 </p>
 
-`draw-ui` 是一个给 Agent 使用的 UI 设计 Skill。它可以把一段页面需求变成完整的 UI 设计稿，也可以把已有截图或生成图还原成可以运行的 HTML/CSS 或微信小程序页面。
+`tta-draw-ui` 是一个给 Agent 使用的 UI 设计 Skill。它可以把一段页面需求变成完整的 UI 设计稿，也可以把已有截图或生成图还原成可以运行的 HTML/CSS 或微信小程序页面。
 
-上面的三张页面都来自 `draw-ui` 的真实生成流程：一张信息密集的分析后台、一张温暖的建筑研究工作台，以及一个手机订餐页面。页面类型和风格可以不同，但开始方式是一样的——先理解页面要解决什么，再决定怎么画。
+上面的三张页面都来自 `tta-draw-ui` 的真实生成流程：一张信息密集的分析后台、一张温暖的建筑研究工作台，以及一个手机订餐页面。页面类型和风格可以不同，但开始方式是一样的——先理解页面要解决什么，再决定怎么画。
 
-| 我们提供 | draw-ui 负责 | 最后得到 |
+| 我们提供 | tta-draw-ui 负责 | 最后得到 |
 | --- | --- | --- |
 | 页面目标、真实内容、现有截图和不能改动的区域 | 梳理需求、选择参考图策略、组织提示词并生成设计 | 一张或一组 UI 设计稿 |
 | 已确认的设计稿或产品截图 | 拆分代码与图片素材，构建页面并反复对照 | 可以运行的 HTML/CSS 页面或微信小程序页面 |
@@ -21,7 +21,7 @@
   <img src="./assets/readme/readme-section-brief.svg" width="100%" alt="03 开始前，先把页面讲清楚">
 </p>
 
-如果我们只说“设计一个 Dashboard”，模型只能自己猜业务，最后很可能画得漂亮，却不是我们需要的页面。开始之前，`draw-ui` 会先确认三件事：
+如果我们只说“设计一个 Dashboard”，模型只能自己猜业务，最后很可能画得漂亮，却不是我们需要的页面。开始之前，`tta-draw-ui` 会先确认三件事：
 
 1. 这是哪个页面，最核心的功能是什么？
 2. 有没有现有 App 截图或设计稿可以参考？
@@ -56,7 +56,7 @@
   <img src="./assets/readme/readme-section-rebuild.svg" width="100%" alt="05 怎么把设计稿还原成 HTML 或微信小程序">
 </p>
 
-还原设计稿不是把整张截图铺成网页背景。`draw-ui` 会把页面拆成代码和图片素材两部分：
+还原设计稿不是把整张截图铺成网页背景。`tta-draw-ui` 会把页面拆成代码和图片素材两部分：
 
 | 用代码完成 | 保留或重新生成图片素材 |
 | --- | --- |
@@ -104,13 +104,13 @@ npx skills add threetwoa/tta-draw-ui
 安装完成后，可以直接描述页面：
 
 ```text
-[$draw-ui] 帮我设计一个创作者数据分析页面，包含 30 天趋势、热门内容和收入数据。
+[$tta-draw-ui] 帮我设计一个创作者数据分析页面，包含 30 天趋势、热门内容和收入数据。
 ```
 
 也可以提供截图，让它还原：
 
 ```text
-[$draw-ui] 把这张设计稿还原成 HTML/CSS，侧边栏保持不变，先告诉我哪些部分需要单独准备图片素材。
+[$tta-draw-ui] 把这张设计稿还原成 HTML/CSS，侧边栏保持不变，先告诉我哪些部分需要单独准备图片素材。
 ```
 
 <details>
@@ -168,9 +168,15 @@ scripts/ask_draw.sh \
 如果目标仓库是 TypeScript、React、Next.js、Vue、Svelte、Electron 或 Tauri 项目，先阅读 `references/software-reconstruction.md`。默认在现有应用架构里复刻 UI；只有明确需要一次性原型时才退回独立 HTML。
 
 <p align="center">
-  <a href="https://github.com/oil-oil/beautify-github-readme"><img src="./assets/readme/made-with-beautify.svg" width="300" alt="README made with beautify-github-readme"></a>
 </p>
 
 ## License
 
 MIT
+
+## 从 oil-* 迁移
+
+1. 删除旧安装：`rm -rf ~/.codex/skills/oil-* ~/.claude/skills/oil-*`
+2. 删除旧配置：`rm -rf ~/.oil-cover ~/.config/oil-motion`（按需备份 API key）
+3. 重新安装：`git clone https://github.com/threetwoa/tta-draw-ui.git ...`
+4. 重新写入 API key 到新配置路径（`~/.config/tta-cover/`、`~/.config/tta-motion/`）

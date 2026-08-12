@@ -146,7 +146,7 @@ npm run build
 For visual comparison after taking a browser screenshot:
 
 ```powershell
-python "$env:USERPROFILE\.agents\skills\draw-ui\scripts\compare_mockup.py" `
+python "$env:USERPROFILE\.agents\skills\tta-draw-ui\scripts\compare_mockup.py" `
   --reference "D:\path\reference.png" `
   --candidate "D:\path\candidate.png" `
   --out-dir "D:\path\verify-output" `
@@ -156,7 +156,7 @@ python "$env:USERPROFILE\.agents\skills\draw-ui\scripts\compare_mockup.py" `
 Use region clips for important areas:
 
 ```powershell
-python "$env:USERPROFILE\.agents\skills\draw-ui\scripts\compare_mockup.py" `
+python "$env:USERPROFILE\.agents\skills\tta-draw-ui\scripts\compare_mockup.py" `
   --reference "D:\path\reference.png" `
   --candidate "D:\path\candidate.png" `
   --out-dir "D:\path\verify-output" `
